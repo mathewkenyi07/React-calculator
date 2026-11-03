@@ -1,0 +1,17 @@
+/* .inputs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+
+
+.heading {
+  text-align: center;
+  width: 200px;
+  margin: 0 auto 12px;
+} */
+
+@import "tailwindcss";
