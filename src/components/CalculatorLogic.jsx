@@ -14,6 +14,11 @@ export default function CalculatorLogic(){
             calculate();
             return;
         }
+
+        if (value === "%"){
+            calculatePercentage();
+            return;
+        }
       
         console.log(value);
         if (display === 0){
@@ -35,7 +40,7 @@ export default function CalculatorLogic(){
         let secondNum;
         console.log(results);
         for (let i = 0; i<results.length; i++){
-            if (results[i] === "+" || results[i] === "-" || results[i] === "÷" || results[i]  === "×"){
+            if (results[i] === "+" || results[i] === "-" || results[i] === "÷" || results[i]  === "×" || results[i]=== "%"){
                 operator.push(results[i]);
                 position = i;
             }
@@ -43,26 +48,32 @@ export default function CalculatorLogic(){
         }
 
         operator = operator.join("")
-
-         firstNum = Number(results.slice(0,position).join(""));
-            console.log(firstNum);
+        firstNum = Number(results.slice(0,position).join(""));
+        console.log(firstNum);
             
-            secondNum = Number(results.slice(position+1).join(""));
-            console.log(secondNum);
+        secondNum = Number(results.slice(position+1).join(""));
+        console.log(secondNum);
 
-            console.log(operator);
+        console.log(operator);
 
-            switch(operator){
-                case "+" : setDisplay(firstNum + secondNum);
-                break;
-                case "-" : setDisplay(firstNum - secondNum);
-                break;
-                case "×" : setDisplay(firstNum * secondNum);
-                break;
-                case "÷" : setDisplay(firstNum / secondNum);
-                break;
-                default: setDisplay("still in progress");
-            }
+        switch(operator){
+            case "+" : setDisplay(firstNum + secondNum);
+            break;
+            case "-" : setDisplay(firstNum - secondNum);
+            break;
+            case "×" : setDisplay(firstNum * secondNum);
+            break;
+            case "÷" : setDisplay(firstNum / secondNum);
+            break;
+            case "%" : setDisplay(firstNum )
+            default: setDisplay("still in progress");
+        }
+    }
+
+    function calculatePercentage(){
+        let num = Number(results.join(""));
+        setDisplay(num/100);
+
     }
 
 
