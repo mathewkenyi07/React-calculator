@@ -1,36 +1,7 @@
 export default function Main({display, buttonClick}) {
     return (
     <>
-    {/* <div className="heading">
-         <h1>Calculator</h1>
-        <input type='type' value = {display}  />
-    </div>
-   
-  <div className="inputs">
-    
-                <button onClick={()=> buttonClick("+")}>+</button>
-                <button onClick={()=> buttonClick("-")}>-</button>
-                <button onClick={()=>buttonClick("×")}>×</button>
-                <button onClick={()=>buttonClick("÷")}>÷</button>
-                <button onClick={() => buttonClick("7")}>7</button>
-                <button onClick={() => buttonClick("8")}>8</button>
-                <button onClick={() => buttonClick("9")}>9</button>
-                <button onClick={() => buttonClick("6")}>6</button>
-                <button onClick={() => buttonClick("5")}>5</button>
-                <button onClick={() => buttonClick("2")}>2</button>
-                <button onClick={() => buttonClick("3")}>3</button>
-                <button onClick={() => buttonClick("4")}>4</button>
-                <button onClick={() => buttonClick("1")}>1</button>
-                <button onClick={() => buttonClick("0")}>0</button>
-                <button id="equals">=</button>
-                <button id="clear">C</button>
-</div> */}
-
-
-
-
 <div className="flex flex-col items-center justify-center h-screen ">
-
   <input type="text" value = {display} className=" inputs bg-gray-500 w-[400px] h-16  text-right text-white text-bold text-3xl"/>
 
   <div className=" second grid grid-cols-4 w-[400px]">
