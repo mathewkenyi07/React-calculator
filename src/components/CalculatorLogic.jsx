@@ -74,7 +74,7 @@ export default function CalculatorLogic() {
       case "%":
         setDisplay(firstNum);
       default:
-        setDisplay("still in progress");
+        setDisplay("oOPs");
     }
   }
 

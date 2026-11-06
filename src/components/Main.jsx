@@ -5,7 +5,7 @@ export default function Main({display, buttonClick}) {
         <input type="text" value = {display} className=" inputs bg-gray-500 w-[400px] h-16  text-right text-white text-bold text-3xl"/>
            <div className=" second grid grid-cols-4 w-[400px]">
            <div className="border border-gray-400 bg-[#dbdbdb] p-4 text-center" onClick={() => buttonClick("AC")}>AC</div>
-           <div className="border border-gray-400 bg-[#dbdbdb] p-4 text-center" onClick={() => buttonClick("+/-")}>+/-</div>
+           <div className="border border-gray-400 bg-[#dbdbdb] p-4 text-center" onClick={() => buttonClick("-")}>+/-</div>
            <div className="border border-gray-400 bg-[#dbdbdb] p-4 text-center" onClick={() => buttonClick("%")}>%</div>
            <div className="border border-gray-400 bg-[#e9803a] p-4 text-center text-white" onClick={()=>buttonClick("÷")}>÷</div>
            <div className="border border-gray-400 bg-[#dbdbdb] p-4 text-center" onClick={() => buttonClick("7")}>7</div>
