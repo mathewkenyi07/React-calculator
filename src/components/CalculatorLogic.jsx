@@ -24,7 +24,7 @@ export default function CalculatorLogic() {
     if (display === 0) {
       setDisplay(value);
     } else {
-      setDisplay(display + value);
+      setDisplay(display + value); // concatenation
     }
     setResults([...results, value]);
     console.log(results);
@@ -50,6 +50,7 @@ export default function CalculatorLogic() {
     }
 
     operator = operator.join("");
+
     firstNum = Number(results.slice(0, position).join(""));
     console.log(firstNum);
 
