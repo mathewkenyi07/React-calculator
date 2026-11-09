@@ -24,7 +24,7 @@ export default function CalculatorLogic() {
 
     if (operators.includes(value)) {
       setResults([...results, value]);
-      setDisplay("")
+      setDisplay("");
       return;
     }
 
