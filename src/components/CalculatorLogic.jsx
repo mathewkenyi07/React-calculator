@@ -20,14 +20,23 @@ export default function CalculatorLogic() {
       return;
     }
 
+    const operators = ["+", "-", "÷", "×"];
+
+    if (operators.includes(value)) {
+      setResults([...results, value]);
+      setDisplay("")
+      return;
+    }
+
     console.log(value);
+
     if (display === 0) {
       setDisplay(value);
     } else {
-      setDisplay(display + value); // concatenation
+      setDisplay(display + value);
     }
+
     setResults([...results, value]);
-    console.log(results);
   }
 
   function calculate() {
